@@ -1,0 +1,14 @@
+nelmio_api_doc:
+  models:
+    names:
+      - { alias: Request Body,  type: App\Entity\User, groups: ['api']}
+      - { alias: User Model,        type: App\Entity\User }
+
+  areas:
+    documentation:
+      info:
+        title: Demo App
+        description: CRUD
+        version: 1.0.0
+    path_patterns: # an array of regexps (document only routes under /api, except /api/doc)
+      - ^/api(?!/doc$)
